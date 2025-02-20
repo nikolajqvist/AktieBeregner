@@ -20,7 +20,7 @@ namespace AktieBeregner
         /// </summary>
         public int Amount { get; set; }
         /// <summary>
-        /// Salgspris på aktien
+        /// Salgspris på aktien nu
         /// </summary>
         public int SellPrice { get; set; }
         /// <summary>
@@ -46,12 +46,12 @@ namespace AktieBeregner
             SellPrice = sellprice;
         }
         /// <summary>
-        /// Udregning af afkastet af 
+        /// Udregning af afkastet af aktie
         /// </summary>
         /// <returns></returns>
         public int ReturnValue()
         {
-            return (BuyPrice - SellPrice) * Amount;
+            return (SellPrice - BuyPrice) * Amount;
         }
     }
 }
